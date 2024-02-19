@@ -8,24 +8,24 @@
     <title>Menu Efeito Montagem</title>
 </head>
 <body>
-    <div class="container">
+    <div style="--li:0.1s;" class="container">
         <button type="button" id="btn">
             <i class="fa-solid fa-bars"></i>
         </button>
         <nav>
-            <li style="--li:0s;" class="list">
+            <li style="--li:0.2s;" class="list">
                 <a href="#"><i class="fa-solid fa-house"></i> Home</a>
             </li>
-            <li style="--li:0.1s;" class="list">
+            <li style="--li:0.3s;" class="list">
                 <a href="#"><i class="fa-solid fa-plus"></i> Register</a>
             </li>
-            <li style="--li:0.2s;" class="list">
+            <li style="--li:0.4s;" class="list">
                 <a href="#"><i class="fa-solid fa-download"></i> Download</a>
             </li>
-            <li style="--li:0.3s;" class="list">
+            <li style="--li:0.5s;" class="list">
                 <a href="#"><i class="fa-solid fa-store"></i> Store</a>
             </li>
-            <li style="--li:0.4s;" class="list">
+            <li style="--li:0.6s;" class="list">
                 <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a>
             </li>
         </nav>
@@ -34,8 +34,10 @@
     <script>
         const btnMenu = document.getElementById('btn');
         const li = document.querySelectorAll('.list');
+        const container = document.querySelector('.container');
 
         btnMenu.addEventListener('click', ()=>{
+            container.classList.toggle('expand');
             li.forEach(itens=>{
                 itens.classList.toggle('active');
             });
